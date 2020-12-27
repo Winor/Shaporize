@@ -1,0 +1,22 @@
+{
+  "name": "shaporize",
+  "version": "0.1.0",
+  "description": "A memory game written in TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Winor/Shaporize.git"
+  },
+  "author": "Winor",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Winor/Shaporize/issues"
+  },
+  "homepage": "https://github.com/Winor/Shaporize#readme",
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  }
+}

@@ -1,0 +1,55 @@
+canvas {
+    height: 150px;
+    width: 150px;
+}
+
+.card {
+    /* height: 500px;
+    width: 50%; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.memo {
+    /* display: grid; */
+    gap: 20px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+.item {
+    width: 150px;
+    height: 150px;
+    outline: 2px solid black
+}
+
+.ask {
+    display: flex;
+    gap: 20px;
+
+}
+
+.btn {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+}
+
+.yes {
+    background-color: green;
+}
+
+.no {
+    background-color: red;
+}
+
+.timer {
+    font-size: 50px;
+    text-align: center;
+}
