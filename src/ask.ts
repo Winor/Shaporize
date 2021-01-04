@@ -11,8 +11,8 @@ export class Ask {
         this.no = document.createElement('div')
         this.yes.setAttribute('class', 'btn yes')
         this.no.setAttribute('class', 'btn no')
-        this.yes.innerText = "yes"
-        this.no.innerText = "no"
+        this.yes.innerText = "Yes"
+        this.no.innerText = "No"
         this.mainDiv.appendChild(this.yes)
         this.mainDiv.appendChild(this.no)
     }
