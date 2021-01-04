@@ -9,7 +9,7 @@ canvas {
     padding-top: 20px;
     padding-bottom: 20px;
     margin: 0 auto;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     display: grid;
     align-items: center;
     justify-content: center;
@@ -29,6 +29,31 @@ canvas {
     outline: 2px solid black
 }
 
+.title {
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.score {
+    width: auto;
+    grid-template-columns: auto 20px;
+    grid-template-rows: auto 20px;
+    display: grid;
+    align-items: center;
+    justify-content: left;
+    padding: 10px;
+    margin-right: 2px;
+    display: inline-flex;
+}
+
+.sitem {
+    outline: 2px solid gray;
+}
+
+.total {
+    outline: 2px solid red;
+}
+
 .ask {
     display: flex;
     gap: 20px;
@@ -36,9 +61,13 @@ canvas {
 }
 
 .btn {
-    width: 100px;
-    height: 30px;
-    text-align: center;
+	width: 120px;
+	text-align: center;
+	margin: 2%;
+	font-size: 20px;
+	color: white;
+	border-radius: 5px;
+	padding: 1px;
 }
 
 .yes {
