@@ -35,16 +35,20 @@ export class Memo {
     ask () {
         this.mainDiv.innerHTML = ""
         this.mainDiv.setAttribute('class', 'card timer')
-        this.mainDiv.innerText = "Have you seen this shape?"
+        const title = document.createElement('div')
+        title.setAttribute('class', 'title')
+        title.innerText = "Have you seen this shape?"
+        this.mainDiv.appendChild(title)
         const inDiv = document.createElement('div')
         inDiv.setAttribute('class', 'item')
         // shape
-        const random = Math.floor(Math.random() * Math.floor(this.amount + 1))
-        inDiv.appendChild(this.shapes[random].canvas)
-        this.mainDiv.appendChild(inDiv)
-        if (random === this.amount) {
-            return false
+        const isTrue = Math.random() < 0.5
+        let index = this.amount
+        if (isTrue) {
+            index = Math.floor(Math.random() * Math.floor(this.amount))
         }
-        return true
+        inDiv.appendChild(this.shapes[index].canvas)
+        this.mainDiv.appendChild(inDiv)
+        return isTrue
     }
 }
