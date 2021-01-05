@@ -1,5 +1,5 @@
 import {Memo} from './memoCard.js'
-import {Timer} from './timer.js'
+import {countDown} from './countDown.js'
 import {Ask} from './ask.js'
 import {Score} from './score.js'
 import {Sounds} from './sounds.js'
@@ -7,7 +7,7 @@ import {Sounds} from './sounds.js'
 window.onload = start
 
 const score = new Score()
-const timer = new Timer(5)
+const count = new countDown(5)
 const shapes = new Memo(4)
 const ask = new Ask()
 const sound = new Sounds()
@@ -15,7 +15,7 @@ sound.ev()
 
 async function start () {
     shapes.run()
-    await timer.start()
+    await count.start()
     const question = shapes.ask()
     const answer = await ask.yesNo()
     if (question === answer) {
