@@ -1,21 +1,18 @@
 export class Canvas {
-    private id: string
-    public width: number
-    public height: number
+    protected width: number
+    protected height: number
+    protected ctx: CanvasRenderingContext2D | null
     private dpi: number
     public canvas: HTMLCanvasElement
 
-    constructor(id: string, width: number, height: number) {
-        this.id = id
+    constructor(width: number, height: number) {
         this.dpi = window.devicePixelRatio
         this.width = width * this.dpi
         this.height = height * this.dpi
         this.canvas = document.createElement('canvas')
-        this.canvas.setAttribute('id', id)
         this.canvas.setAttribute('width', this.width.toString())
         this.canvas.setAttribute('height', this.height.toString())
-        this.canvas.setAttribute('class', 'border-4 border-light-blue-500 border-opacity-100')
-        //this.canvas.onclick = this.run
+        this.ctx = this.canvas.getContext('2d')
     }
     // run() {
     //     console.log(this.id)
