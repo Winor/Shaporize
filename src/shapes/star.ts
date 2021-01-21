@@ -17,13 +17,13 @@ export class Star extends baseShape {
             const posX = radius * Math.sin(angle) +  this.width/2
             const posY = radius * Math.cos(angle) + this.height/2
 
-            this.ctx.fillStyle = `hsl(${this.hue}, 100%, 50%)`
-            this.ctx.lineWidth = 2
-            this.ctx.strokeStyle = `hsl(${this.hue}, 100%, 10%)`
+            this.ctx.fillStyle = `black`
+            this.ctx.lineWidth = 1
+            this.ctx.strokeStyle = `hsl(${this.hue}, 100%, 50%)`
             this.ctx.beginPath()
-            this.ctx.moveTo(posX, posY);
-            this.ctx.lineTo(100, 74);
-            this.ctx.lineTo(74, 100);
+            this.ctx.moveTo(this.width/2,  this.height/2);
+            this.ctx.lineTo(posX, posY);
+            this.ctx.lineTo(this.width/2, this.height/2);
             
             //this.ctx.arc(posX, posY, this.height - this.rounds, 0, Math.PI * 2)
             this.ctx.closePath()
@@ -31,7 +31,7 @@ export class Star extends baseShape {
             this.ctx.stroke()
 
             this.rounds ++
-            this.hue += 0.3
+            this.hue += 0.5
         }
     }
 }
