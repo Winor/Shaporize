@@ -36,7 +36,7 @@ export class Memo {
             const shape = this.random(150, 150)
             const inDiv = document.createElement('div')
             inDiv.setAttribute('class', 'item')
-            shape.animate()
+            shape.loop()
             this.shapes.push(shape)
             inDiv.appendChild(shape.canvas)
             if (i === this.amount) {
