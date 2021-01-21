@@ -1,6 +1,7 @@
 import type {baseShape} from './baseShape'
-import {Wave} from './shapes/wave.js'
+import {Star} from './shapes/star.js'
 import {Flower} from './shapes/flower.js'
+import {TrineFlower} from './shapes/trineFlower.js'
 
 export class Memo {
     mainDiv: HTMLDivElement
@@ -15,8 +16,11 @@ export class Memo {
 
     random(w: number, h: number) {
         const random = Math.random()
+        if (random < 0.2) {
+            return new TrineFlower(w,h)
+        }
         if (random < 0.5) {
-            return new Wave(w,h)
+            return new Star(w,h)
         }
         return new Flower(w,h)
     }
@@ -32,7 +36,7 @@ export class Memo {
             const shape = this.random(150, 150)
             const inDiv = document.createElement('div')
             inDiv.setAttribute('class', 'item')
-            shape.loop()
+            shape.animate()
             this.shapes.push(shape)
             inDiv.appendChild(shape.canvas)
             if (i === this.amount) {
