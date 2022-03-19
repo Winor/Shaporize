@@ -1,4 +1,4 @@
-import {baseShape} from '../baseShape.js'
+import {baseShape} from '../baseShape'
 
 export class Flower extends baseShape {
     private hue: number

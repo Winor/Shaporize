@@ -1,9 +1,8 @@
-import {Memo} from './memoCard.js'
-import {countDown} from './countDown.js'
-import {Ask} from './ask.js'
-import {Score} from './score.js'
-import {Sounds} from './sounds.js'
-
+import {Memo} from './memoCard'
+import {countDown} from './countDown'
+import {Ask} from './ask'
+import {Score} from './score'
+import {Sounds} from './sounds'
 window.onload = start
 
 const score = new Score()

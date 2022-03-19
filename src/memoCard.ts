@@ -1,7 +1,7 @@
 import type {baseShape} from './baseShape'
-import {Star} from './shapes/star.js'
-import {Flower} from './shapes/flower.js'
-import {TrineFlower} from './shapes/trineFlower.js'
+import {Star} from './shapes/star'
+import {Flower} from './shapes/flower'
+import {TrineFlower} from './shapes/trineFlower'
 
 export class Memo {
     mainDiv: HTMLDivElement
